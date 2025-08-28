@@ -1,0 +1,885 @@
+Executing transaction: done
+installation finished.
+Do you wish to update your shell profile to automatically initialize conda?
+This will activate conda on startup and change the command prompt when activated.
+If you'd prefer that conda's base environment not be activated on startup,
+   run the following command when conda is activated:
+
+conda config --set auto_activate_base false
+
+You can undo this by running `conda init --reverse $SHELL`? [yes|no]
+[no] >>> yes    
+no change     /home/kefeletswemajoka/miniconda3/condabin/conda
+no change     /home/kefeletswemajoka/miniconda3/bin/conda
+no change     /home/kefeletswemajoka/miniconda3/bin/conda-env
+no change     /home/kefeletswemajoka/miniconda3/bin/activate
+no change     /home/kefeletswemajoka/miniconda3/bin/deactivate
+no change     /home/kefeletswemajoka/miniconda3/etc/profile.d/conda.sh
+no change     /home/kefeletswemajoka/miniconda3/etc/fish/conf.d/conda.fish
+no change     /home/kefeletswemajoka/miniconda3/shell/condabin/Conda.psm1
+no change     /home/kefeletswemajoka/miniconda3/shell/condabin/conda-hook.ps1
+no change     /home/kefeletswemajoka/miniconda3/lib/python3.13/site-packages/xontrib/conda.xsh
+no change     /home/kefeletswemajoka/miniconda3/etc/profile.d/conda.csh
+modified      /home/kefeletswemajoka/.bashrc
+
+==> For changes to take effect, close and re-open your current shell. <==
+
+Thank you for installing Miniconda3!
+(base) kefeletswemajoka@cloudshell:~$ conda --version
+conda 25.7.0
+(base) kefeletswemajoka@cloudshell:~$ conda activate base
+(base) kefeletswemajoka@cloudshell:~$ #create conda environemt named funtools
+(base) kefeletswemajoka@cloudshell:~$ conda create -n funtools
+Do you accept the Terms of Service (ToS) for https://repo.anaconda.com/pkgs/main? [(a)ccept/(r)eject/(v)iew]: a
+Do you accept the Terms of Service (ToS) for https://repo.anaconda.com/pkgs/r? [(a)ccept/(r)eject/(v)iew]: accept
+2 channel Terms of Service accepted
+Retrieving notices: done
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/kefeletswemajoka/miniconda3/envs/funtools
+
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate funtools
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(base) kefeletswemajoka@cloudshell:~$ #activate the funtools environment
+(base) kefeletswemajoka@cloudshell:~$ conda activate funtools
+(funtools) kefeletswemajoka@cloudshell:~$ #install figlet using conda or apt-get
+(funtools) kefeletswemajoka@cloudshell:~$ conda install -c bioconda filler
+2 channel Terms of Service accepted
+Channels:
+ - bioconda
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - filler
+
+Current channels:
+
+  - https://conda.anaconda.org/bioconda
+  - defaults
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(funtools) kefeletswemajoka@cloudshell:~$ #correction,figlet not filler
+(funtools) kefeletswemajoka@cloudshell:~$ conda install -c conda-forge figlet
+2 channel Terms of Service accepted
+Channels:
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - figlet
+
+Current channels:
+
+  - https://conda.anaconda.org/conda-forge
+  - defaults
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(funtools) kefeletswemajoka@cloudshell:~$ #run figlet with your name
+(funtools) kefeletswemajoka@cloudshell:~$ figlet Kefeletswe
+bash: figlet: command not found
+(funtools) kefeletswemajoka@cloudshell:~$ 'figlet <Kefeletswe>'
+bash: figlet <Kefeletswe>: command not found
+(funtools) kefeletswemajoka@cloudshell:~$ 'figlet Kefeletswe'
+bash: figlet Kefeletswe: command not found
+(funtools) kefeletswemajoka@cloudshell:~$ `figlet Kefeletswe`
+bash: figlet: command not found
+(funtools) kefeletswemajoka@cloudshell:~$ conda list figlet
+# packages in environment at /home/kefeletswemajoka/miniconda3/envs/funtools:
+#
+# Name                     Version          Build            Channel
+(funtools) kefeletswemajoka@cloudshell:~$ conda install -c conda-forge figlet
+2 channel Terms of Service accepted
+Channels:
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - figlet
+
+Current channels:
+
+  - https://conda.anaconda.org/conda-forge
+  - defaults
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(funtools) kefeletswemajoka@cloudshell:~$ which figlet
+(funtools) kefeletswemajoka@cloudshell:~$ which figlet
+(funtools) kefeletswemajoka@cloudshell:~$ figlet Kefeletswe
+bash: figlet: command not found
+(funtools) kefeletswemajoka@cloudshell:~$ pwd
+/home/kefeletswemajoka
+(funtools) kefeletswemajoka@cloudshell:~$ #install figlet using apt-get
+(funtools) kefeletswemajoka@cloudshell:~$ sudo apt-get update
+********************************************************************************
+You are running apt-get inside of Cloud Shell. Note that your Cloud Shell  
+machine is ephemeral and no system-wide change will persist beyond session end. 
+
+To suppress this warning, create an empty ~/.cloudshell/no-apt-get-warning file.
+The command will automatically proceed in 5 seconds or on any key. 
+
+Visit https://cloud.google.com/shell/help for more information.                 
+********************************************************************************
+Hit:1 https://download.docker.com/linux/ubuntu noble InRelease
+Get:2 https://packages.cloud.google.com/apt gcsfuse-noble InRelease [1,227 B]                                                                                    
+Hit:3 https://cli.github.com/packages stable InRelease                                                                                                           
+Get:4 https://apt.postgresql.org/pub/repos/apt noble-pgdg InRelease [107 kB]                                                                                     
+Get:5 https://packages.cloud.google.com/apt cloud-sdk InRelease [1,620 B]                                                                                        
+Hit:6 https://ppa.launchpadcontent.net/dotnet/backports/ubuntu noble InRelease                                  
+Get:7 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]                 
+Hit:8 http://archive.ubuntu.com/ubuntu noble InRelease                         
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]        
+Get:10 https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 InRelease [3,005 B]      
+Get:11 https://apt.postgresql.org/pub/repos/apt noble-pgdg/main amd64 Packages [545 kB]                 
+Get:12 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:13 https://packages.cloud.google.com/apt cloud-sdk/main amd64 Packages [4,101 kB]
+Get:14 https://packages.cloud.google.com/apt cloud-sdk/main all Packages [1,809 kB]
+Get:15 https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0/multiverse amd64 Packages [47.3 kB]
+Get:16 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1,392 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2,247 kB]
+Get:18 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1,137 kB]
+Get:19 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2,134 kB]     
+Get:20 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1,456 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1,741 kB]             
+Fetched 17.1 MB in 2s (8,016 kB/s)                           
+Reading package lists... Done
+(funtools) kefeletswemajoka@cloudshell:~$ sudo apt-get install figlet-y
+********************************************************************************
+You are running apt-get inside of Cloud Shell. Note that your Cloud Shell  
+machine is ephemeral and no system-wide change will persist beyond session end. 
+
+To suppress this warning, create an empty ~/.cloudshell/no-apt-get-warning file.
+The command will automatically proceed in 5 seconds or on any key. 
+
+Visit https://cloud.google.com/shell/help for more information.                 
+********************************************************************************
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package figlet-y
+(funtools) kefeletswemajoka@cloudshell:~$ figlet Kefeletswe
+bash: figlet: command not found
+(funtools) kefeletswemajoka@cloudshell:~$ sudo apt-get update
+********************************************************************************
+You are running apt-get inside of Cloud Shell. Note that your Cloud Shell  
+machine is ephemeral and no system-wide change will persist beyond session end. 
+
+To suppress this warning, create an empty ~/.cloudshell/no-apt-get-warning file.
+The command will automatically proceed in 5 seconds or on any key. 
+
+Visit https://cloud.google.com/shell/help for more information.                 
+********************************************************************************
+Hit:1 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:2 https://cli.github.com/packages stable InRelease                                                                                                           
+Hit:3 https://apt.postgresql.org/pub/repos/apt noble-pgdg InRelease                                                                                              
+Hit:4 https://packages.cloud.google.com/apt gcsfuse-noble InRelease                                                                                              
+Hit:5 https://packages.cloud.google.com/apt cloud-sdk InRelease                                                                                                  
+Hit:6 https://ppa.launchpadcontent.net/dotnet/backports/ubuntu noble InRelease                                                                     
+Hit:7 http://archive.ubuntu.com/ubuntu noble InRelease                                    
+Hit:8 http://security.ubuntu.com/ubuntu noble-security InRelease    
+Hit:9 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:10 https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 InRelease
+Hit:11 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+(funtools) kefeletswemajoka@cloudshell:~$ sudo apt-get install figlet
+********************************************************************************
+You are running apt-get inside of Cloud Shell. Note that your Cloud Shell  
+machine is ephemeral and no system-wide change will persist beyond session end. 
+
+To suppress this warning, create an empty ~/.cloudshell/no-apt-get-warning file.
+The command will automatically proceed in 5 seconds or on any key. 
+
+Visit https://cloud.google.com/shell/help for more information.                 
+********************************************************************************
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  figlet
+0 upgraded, 1 newly installed, 0 to remove and 21 not upgraded.
+Need to get 133 kB of archives.
+After this operation, 752 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 figlet amd64 2.2.5-3 [133 kB]
+Fetched 133 kB in 0s (1,647 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package figlet.
+(Reading database ... 127165 files and directories currently installed.)
+Preparing to unpack .../figlet_2.2.5-3_amd64.deb ...
+Unpacking figlet (2.2.5-3) ...
+Setting up figlet (2.2.5-3) ...
+update-alternatives: using /usr/bin/figlet-figlet to provide /usr/bin/figlet (figlet) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man6/figlet.6.gz because associated file /usr/share/man/man6/figlet-figlet.6.gz (of link group figlet) doesn't exist
+Processing triggers for man-db (2.12.0-4build2) ...
+(funtools) kefeletswemajoka@cloudshell:~$ figlet Kefeletswe
+ _  __     __      _      _                    
+| |/ /___ / _| ___| | ___| |_ _____      _____ 
+| ' // _ \ |_ / _ \ |/ _ \ __/ __\ \ /\ / / _ \
+| . \  __/  _|  __/ |  __/ |_\__ \\ V  V /  __/
+|_|\_\___|_|  \___|_|\___|\__|___/ \_/\_/ \___|
+                                               
+(funtools) kefeletswemajoka@cloudshell:~$ conda activate funtools
+(funtools) kefeletswemajoka@cloudshell:~$ #install bwa through bioconda channel
+(funtools) kefeletswemajoka@cloudshell:~$ conda install -c bioconda bwa
+2 channel Terms of Service accepted
+Channels:
+ - bioconda
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/kefeletswemajoka/miniconda3/envs/funtools
+
+  added / updated specs:
+    - bwa
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    bwa-0.7.17                 |       h5bf99c6_8         608 KB  bioconda
+    perl-5.40.2                | 0_h5eee18b_perl5        13.2 MB
+    ------------------------------------------------------------
+                                           Total:        13.8 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main 
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu 
+  bwa                bioconda/linux-64::bwa-0.7.17-h5bf99c6_8 
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-11.2.0-h1234567_1 
+  libgomp            pkgs/main/linux-64::libgomp-11.2.0-h1234567_1 
+  perl               pkgs/main/linux-64::perl-5.40.2-0_h5eee18b_perl5 
+  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_1 
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+                                                                                                                                                                  
+Preparing transaction: done                                                                                                                                       
+Verifying transaction: done
+Executing transaction: done
+(funtools) kefeletswemajoka@cloudshell:~$ bwa
+
+Program: bwa (alignment via Burrows-Wheeler transformation)
+Version: 0.7.17-r1188
+Contact: Heng Li <lh3@sanger.ac.uk>
+
+Usage:   bwa <command> [options]
+
+Command: index         index sequences in the FASTA format
+         mem           BWA-MEM algorithm
+         fastmap       identify super-maximal exact matches
+         pemerge       merge overlapping paired ends (EXPERIMENTAL)
+         aln           gapped/ungapped alignment
+         samse         generate alignment (single ended)
+         sampe         generate alignment (paired ended)
+         bwasw         BWA-SW for long queries
+
+         shm           manage indices in shared memory
+         fa2pac        convert FASTA to PAC format
+         pac2bwt       generate BWT from PAC
+         pac2bwtgen    alternative algorithm for generating BWT
+         bwtupdate     update .bwt to the new format
+         bwt2sa        generate SA from BWT and Occ
+
+Note: To use BWA, you need to first index the genome with `bwa index'.
+      There are three alignment algorithms in BWA: `mem', `bwasw', and
+      `aln/samse/sampe'. If you are not sure which to use, try `bwa mem'
+      first. Please `man ./bwa.1' for the manual.
+
+(funtools) kefeletswemajoka@cloudshell:~$ #install blast through the bioconda channel
+(funtools) kefeletswemajoka@cloudshell:~$ conda install -c bioconda blast
+2 channel Terms of Service accepted
+Channels:
+ - bioconda
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/kefeletswemajoka/miniconda3/envs/funtools
+
+  added / updated specs:
+    - blast
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    blast-2.5.0                |       hc0b0e79_3       137.8 MB  bioconda
+    boost-1.82.0               |  py312h06a4308_2          11 KB
+    libboost-1.82.0            |       h109eef0_2        19.5 MB
+    py-boost-1.82.0            |  py312h6db74b5_2         324 KB
+    python-3.12.11             |       h22baa00_0        34.6 MB
+    setuptools-78.1.1          |  py312h06a4308_0         2.2 MB
+    wheel-0.45.1               |  py312h06a4308_0         147 KB
+    ------------------------------------------------------------
+                                           Total:       194.6 MB
+
+The following NEW packages will be INSTALLED:
+
+  blast              bioconda/linux-64::blast-2.5.0-hc0b0e79_3 
+  boost              pkgs/main/linux-64::boost-1.82.0-py312h06a4308_2 
+  bzip2              pkgs/main/linux-64::bzip2-1.0.8-h5eee18b_6 
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2025.7.15-h06a4308_0 
+  expat              pkgs/main/linux-64::expat-2.7.1-h6a678d5_0 
+  icu                pkgs/main/linux-64::icu-73.1-h6a678d5_0 
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.40-h12ee557_0 
+  libboost           pkgs/main/linux-64::libboost-1.82.0-h109eef0_2 
+  libffi             pkgs/main/linux-64::libffi-3.4.4-h6a678d5_1 
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-11.2.0-h1234567_1 
+  libuuid            pkgs/main/linux-64::libuuid-1.41.5-h5eee18b_0 
+  libxcb             pkgs/main/linux-64::libxcb-1.17.0-h9b100fa_0 
+  lz4-c              pkgs/main/linux-64::lz4-c-1.9.4-h6a678d5_1 
+  ncurses            pkgs/main/linux-64::ncurses-6.5-h7934f7d_0 
+  libxcb             pkgs/main/linux-64::libxcb-1.17.0-h9b100fa_0 
+  lz4-c              pkgs/main/linux-64::lz4-c-1.9.4-h6a678d5_1 
+  ncurses            pkgs/main/linux-64::ncurses-6.5-h7934f7d_0 
+  openssl            pkgs/main/linux-64::openssl-3.0.17-h5eee18b_0 
+  pip                pkgs/main/noarch::pip-25.1-pyhc872135_2 
+  pthread-stubs      pkgs/main/linux-64::pthread-stubs-0.3-h0ce48e5_1 
+  py-boost           pkgs/main/linux-64::py-boost-1.82.0-py312h6db74b5_2 
+  python             pkgs/main/linux-64::python-3.12.11-h22baa00_0 
+  readline           pkgs/main/linux-64::readline-8.3-hc2a1206_0 
+  setuptools         pkgs/main/linux-64::setuptools-78.1.1-py312h06a4308_0 
+  sqlite             pkgs/main/linux-64::sqlite-3.50.2-hb25bd0a_1 
+  tk                 pkgs/main/linux-64::tk-8.6.15-h54e0aa7_0 
+  tzdata             pkgs/main/noarch::tzdata-2025b-h04d1e81_0 
+  wheel              pkgs/main/linux-64::wheel-0.45.1-py312h06a4308_0 
+  xorg-libx11        pkgs/main/linux-64::xorg-libx11-1.8.12-h9b100fa_1 
+  xorg-libxau        pkgs/main/linux-64::xorg-libxau-1.0.12-h9b100fa_0 
+  xorg-libxdmcp      pkgs/main/linux-64::xorg-libxdmcp-1.1.5-h9b100fa_0 
+  xorg-xorgproto     pkgs/main/linux-64::xorg-xorgproto-2024.1-h5eee18b_1 
+  xz                 pkgs/main/linux-64::xz-5.6.4-h5eee18b_1 
+  zstd               pkgs/main/linux-64::zstd-1.5.6-hc292b87_0 
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+                                                                                                                                                                  
+Preparing transaction: done                                                                                                                                       
+Verifying transaction: done                                                                                                                                       
+Executing transaction: done                                                                                                                                       
+(funtools) kefeletswemajoka@cloudshell:~$ #install samtools through the bioconda channel                                                                          
+(funtools) kefeletswemajoka@cloudshell:~$ conda install -c bioconda samtools
+2 channel Terms of Service accepted                                                                                                                               
+Channels:
+ - bioconda
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/kefeletswemajoka/miniconda3/envs/funtools
+
+  added / updated specs:
+    - samtools
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    blast-2.12.0               | pl5262h3289130_0        22.4 MB  bioconda
+    curl-7.87.0                |       h5eee18b_0          88 KB
+    entrez-direct-24.0         |       he881be0_0        16.3 MB  bioconda
+    htslib-1.13                |       h9093b5e_0         2.2 MB  bioconda
+    icu-58.2                   |       he6710b0_3        10.5 MB
+    krb5-1.19.2                |       hac12032_0         1.2 MB
+    libboost-1.73.0            |      h28710b8_12        13.8 MB
+    libcurl-7.87.0             |       h91b91d3_0         373 KB
+    libdeflate-1.22            |       h5eee18b_0          68 KB
+    libedit-3.1.20210714       |       h7f8727e_0         165 KB
+    libidn2-2.3.4              |       hb25bd0a_1          72 KB
+    libnghttp2-1.52.0          |       ha637b67_1         671 KB
+    libssh2-1.10.0             |       h37d81fd_2         292 KB
+    libunistring-1.3           |       hb25bd0a_0         721 KB
+    ncurses-6.2                |       he6710b0_1         817 KB
+    openssl-1.1.1w             |       h7f8727e_0         3.7 MB
+    pcre-8.45                  |       h295c915_0         207 KB
+    perl-5.26.2                |       h14c3975_0        10.5 MB
+    perl-archive-tar-2.32      |          pl526_0          31 KB  bioconda
+    perl-carp-1.38             |          pl526_3          15 KB  bioconda
+    perl-common-sense-3.74     |          pl526_2          11 KB  bioconda
+    perl-compress-raw-bzip2-2.087|  pl526he1b5a44_0          44 KB  bioconda
+    perl-compress-raw-zlib-2.087|  pl526hc9558a2_0          72 KB  bioconda
+    perl-exporter-5.72         |          pl526_1          13 KB  bioconda
+    perl-exporter-tiny-1.002001|          pl526_0          23 KB  bioconda
+    perl-extutils-makemaker-7.36|          pl526_1         153 KB  bioconda
+    perl-io-compress-2.087     |  pl526he1b5a44_0          81 KB  bioconda
+    perl-io-zlib-1.10          |          pl526_2           9 KB  bioconda
+    perl-json-4.02             |          pl526_0          52 KB  bioconda
+    perl-json-xs-2.34          |  pl526h6bb024c_3          63 KB  bioconda
+    perl-list-moreutils-0.428  |          pl526_1          28 KB  bioconda
+    perl-list-moreutils-xs-0.428|          pl526_0          43 KB  bioconda
+    perl-pathtools-3.75        |  pl526h14c3975_1          41 KB  bioconda
+    perl-scalar-list-utils-1.52|  pl526h516909a_0          38 KB  bioconda
+    perl-types-serialiser-1.0  |          pl526_2          10 KB  bioconda
+    perl-xsloader-0.24         |          pl526_0           8 KB  bioconda
+    readline-8.1               |       h27cfd23_0         362 KB
+    samtools-1.13              |       h8c37831_0         397 KB  bioconda
+    sqlite-3.40.1              |       h5082296_0         1.2 MB
+    wget-1.21.4                |       h91b91d3_1         805 KB
+    xz-5.2.10                  |       h5eee18b_1         429 KB
+    zstd-1.5.5                 |       hc292b87_0         647 KB
+    ------------------------------------------------------------
+                                           Total:        88.5 MB
+
+The following NEW packages will be INSTALLED:
+
+  c-ares             pkgs/main/linux-64::c-ares-1.34.5-hef5626c_0 
+  curl               pkgs/main/linux-64::curl-7.87.0-h5eee18b_0 
+  entrez-direct      bioconda/linux-64::entrez-direct-24.0-he881be0_0 
+  htslib             bioconda/linux-64::htslib-1.13-h9093b5e_0 
+  krb5               pkgs/main/linux-64::krb5-1.19.2-hac12032_0 
+  libcurl            pkgs/main/linux-64::libcurl-7.87.0-h91b91d3_0 
+  libdeflate         pkgs/main/linux-64::libdeflate-1.22-h5eee18b_0 
+  libedit            pkgs/main/linux-64::libedit-3.1.20210714-h7f8727e_0 
+  libev              pkgs/main/linux-64::libev-4.33-h7f8727e_1 
+  libidn2            pkgs/main/linux-64::libidn2-2.3.4-hb25bd0a_1 
+  libnghttp2         pkgs/main/linux-64::libnghttp2-1.52.0-ha637b67_1 
+  libssh2            pkgs/main/linux-64::libssh2-1.10.0-h37d81fd_2 
+  libunistring       pkgs/main/linux-64::libunistring-1.3-hb25bd0a_0 
+  pcre               pkgs/main/linux-64::pcre-8.45-h295c915_0 
+  perl-archive-tar   bioconda/linux-64::perl-archive-tar-2.32-pl526_0 
+  perl-carp          bioconda/linux-64::perl-carp-1.38-pl526_3 
+  perl-common-sense  bioconda/linux-64::perl-common-sense-3.74-pl526_2 
+  perl-compress-raw~ bioconda/linux-64::perl-compress-raw-bzip2-2.087-pl526he1b5a44_0 
+  perl-compress-raw~ bioconda/linux-64::perl-compress-raw-zlib-2.087-pl526hc9558a2_0 
+  perl-exporter      bioconda/linux-64::perl-exporter-5.72-pl526_1 
+  perl-exporter-tiny bioconda/linux-64::perl-exporter-tiny-1.002001-pl526_0 
+  perl-extutils-mak~ bioconda/linux-64::perl-extutils-makemaker-7.36-pl526_1 
+  perl-io-compress   bioconda/linux-64::perl-io-compress-2.087-pl526he1b5a44_0 
+  perl-io-zlib       bioconda/linux-64::perl-io-zlib-1.10-pl526_2 
+  perl-json          bioconda/linux-64::perl-json-4.02-pl526_0 
+  perl-json-xs       bioconda/linux-64::perl-json-xs-2.34-pl526h6bb024c_3 
+  perl-list-moreuti~ bioconda/linux-64::perl-list-moreutils-0.428-pl526_1 
+  perl-list-moreuti~ bioconda/linux-64::perl-list-moreutils-xs-0.428-pl526_0 
+  perl-pathtools     bioconda/linux-64::perl-pathtools-3.75-pl526h14c3975_1 
+  perl-scalar-list-~ bioconda/linux-64::perl-scalar-list-utils-1.52-pl526h516909a_0 
+  perl-types-serial~ bioconda/linux-64::perl-types-serialiser-1.0-pl526_2 
+  perl-xsloader      bioconda/linux-64::perl-xsloader-0.24-pl526_0 
+  samtools           bioconda/linux-64::samtools-1.13-h8c37831_0 
+  wget               pkgs/main/linux-64::wget-1.21.4-h91b91d3_1 
+
+The following packages will be REMOVED:
+
+  boost-1.82.0-py312h06a4308_2
+  pip-25.1-pyhc872135_2
+  py-boost-1.82.0-py312h6db74b5_2
+  python-3.12.11-h22baa00_0
+  setuptools-78.1.1-py312h06a4308_0
+  wheel-0.45.1-py312h06a4308_0
+
+The following packages will be UPDATED:
+
+  blast                                    2.5.0-hc0b0e79_3 --> 2.12.0-pl5262h3289130_0 
+
+The following packages will be DOWNGRADED:
+
+  icu                                       73.1-h6a678d5_0 --> 58.2-he6710b0_3 
+  libboost                                1.82.0-h109eef0_2 --> 1.73.0-h28710b8_12 
+  ncurses                                    6.5-h7934f7d_0 --> 6.2-he6710b0_1 
+  openssl                                 3.0.17-h5eee18b_0 --> 1.1.1w-h7f8727e_0 
+  perl                              5.40.2-0_h5eee18b_perl5 --> 5.26.2-h14c3975_0 
+  readline                                   8.3-hc2a1206_0 --> 8.1-h27cfd23_0 
+  sqlite                                  3.50.2-hb25bd0a_1 --> 3.40.1-h5082296_0 
+  xz                                       5.6.4-h5eee18b_1 --> 5.2.10-h5eee18b_1 
+  zstd                                     1.5.6-hc292b87_0 --> 1.5.5-hc292b87_0 
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+                                                                                                                                                                  
+Preparing transaction: done                                                                                                                                       
+Verifying transaction: done                                                                                                                                       
+Executing transaction: done                                                                                                                                       
+(funtools) kefeletswemajoka@cloudshell:~$  #install bedtools                                                                                                      
+(funtools) kefeletswemajoka@cloudshell:~$ conda activate funtools                                                                                                 
+(funtools) kefeletswemajoka@cloudshell:~$ conda install -c bioconda bedtools
+2 channel Terms of Service accepted                                                                                                                               
+Channels:                                                                                                                                                         
+ - bioconda                                                                                                                                                       
+ - defaults                                                                                                                                                       
+Platform: linux-64                                                                                                                                                
+Collecting package metadata (repodata.json): done                                                                                                                 
+Solving environment: done                                                                                                                                         
+                                                                                                                                                                  
+## Package Plan ##                                                                                                                                                
+                                                                                                                                                                  
+  environment location: /home/kefeletswemajoka/miniconda3/envs/funtools                                                                                           
+                                                                                                                                                                  
+  added / updated specs:                                                                                                                                          
+    - bedtools                                                                                                                                                    
+                                                                                                                                                                  
+                                                                                                                                                                  
+The following packages will be downloaded:                                                                                                                        
+                                                                                                                                                                  
+    package                    |            build                                                                                                                 
+    ---------------------------|-----------------                                                                                                                 
+    bedtools-2.30.0            |       h7d7f7ad_2        17.9 MB  bioconda                                                                                        
+    ------------------------------------------------------------                                                                                                  
+                                           Total:        17.9 MB                                                                                                  
+                                                                                                                                                                  
+The following NEW packages will be INSTALLED:                                                                                                                     
+                      
+  bedtools           bioconda/linux-64::bedtools-2.30.0-h7d7f7ad_2 
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+                                                                                                                                                                  
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(funtools) kefeletswemajoka@cloudshell:~$ conda install -c bioconda spades
+2 channel Terms of Service accepted
+Channels:
+ - bioconda
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/kefeletswemajoka/miniconda3/envs/funtools
+
+  added / updated specs:
+    - spades
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    spades-3.9.0               |                0         9.1 MB  bioconda
+    ------------------------------------------------------------
+                                           Total:         9.1 MB
+
+The following NEW packages will be INSTALLED:
+
+  spades             bioconda/linux-64::spades-3.9.0-0 
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+                                                                                                                                                                  
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(funtools) kefeletswemajoka@cloudshell:~$ #install bcftools
+(funtools) kefeletswemajoka@cloudshell:~$ conda install -c bioconda bcftools
+2 channel Terms of Service accepted
+Channels:
+ - bioconda
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/kefeletswemajoka/miniconda3/envs/funtools
+
+  added / updated specs:
+    - bcftools
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    bcftools-1.11              |       h7c999a4_0         825 KB  bioconda
+    gsl-2.6                    |       ha341630_0         2.1 MB
+    ------------------------------------------------------------
+                                           Total:         2.9 MB
+
+The following NEW packages will be INSTALLED:
+
+  bcftools           bioconda/linux-64::bcftools-1.11-h7c999a4_0 
+  gsl                pkgs/main/linux-64::gsl-2.6-ha341630_0 
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+                                                                                                                                                                  
+Preparing transaction: done                                                                                                                                       
+Verifying transaction: done
+Executing transaction: done
+(funtools) kefeletswemajoka@cloudshell:~$ #install fastq
+(funtools) kefeletswemajoka@cloudshell:~$ conda install -c bioconda fastp
+2 channel Terms of Service accepted
+Channels:
+ - bioconda
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/kefeletswemajoka/miniconda3/envs/funtools
+
+  added / updated specs:
+    - fastp
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    fastp-0.23.2               |       hb7a2d85_2         3.2 MB  bioconda
+    isa-l-2.30.0               |       h7f8727e_0         176 KB
+    ------------------------------------------------------------
+                                           Total:         3.4 MB
+
+The following NEW packages will be INSTALLED:
+
+  fastp              bioconda/linux-64::fastp-0.23.2-hb7a2d85_2 
+  isa-l              pkgs/main/linux-64::isa-l-2.30.0-h7f8727e_0 
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+                                                                                                                                                                  
+Preparing transaction: done                                                                                                                                       
+Verifying transaction: done
+Executing transaction: done
+(funtools) kefeletswemajoka@cloudshell:~$ #install multiqc
+(funtools) kefeletswemajoka@cloudshell:~$ conda install -c bioconda multiqc
+2 channel Terms of Service accepted
+Channels:
+ - bioconda
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/kefeletswemajoka/miniconda3/envs/funtools
+
+  added / updated specs:
+    - multiqc
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    backports-1.1              |     pyhd3eb1b0_1           6 KB
+    backports.functools_lru_cache-1.6.4|     pyhd3eb1b0_0           9 KB
+    backports_abc-0.5          |             py_1          10 KB
+    blas-1.0                   |              mkl           6 KB
+    certifi-2020.6.20          |     pyhd3eb1b0_3         155 KB
+    click-7.1.2                |     pyhd3eb1b0_0          64 KB
+    cycler-0.10.0              |           py27_0          13 KB
+    fontconfig-2.14.1          |       h52c9d5c_1         281 KB
+    freetype-2.13.3            |       h4a9f257_0         686 KB
+    functools32-3.2.3.2        |           py27_1          23 KB
+    futures-3.3.0              |           py27_0          29 KB
+    gettext-0.21.0             |       hf68c758_0         2.6 MB
+    git-2.34.1                 | pl5262hc120c5b_0         6.0 MB
+    glib-2.69.1                |       h4ff587b_1         1.7 MB
+    gst-plugins-base-1.14.1    |       h6a678d5_1         2.2 MB
+    gstreamer-1.14.1           |       h5eee18b_1         1.7 MB
+    intel-openmp-2025.0.0      |    h06a4308_1171        22.3 MB
+    jinja2-2.11.3              |     pyhd3eb1b0_0         101 KB
+    jpeg-9e                    |       h5eee18b_3         262 KB
+    kiwisolver-1.1.0           |   py27he6710b0_0          84 KB
+    libffi-3.3                 |       he6710b0_2          50 KB
+    libgfortran-ng-7.5.0       |      ha8ba4b0_17          22 KB
+    libgfortran4-7.5.0         |      ha8ba4b0_17         995 KB
+    libpng-1.6.39              |       h5eee18b_0         304 KB
+    libxml2-2.9.14             |       h74e7548_0         718 KB
+    markupsafe-1.1.1           |   py27h7b6447c_0          29 KB
+    matplotlib-2.2.3           |   py27hb69df0a_0         4.8 MB
+    mkl-2020.2                 |              256       138.3 MB
+    mkl-service-2.3.0          |   py27he904b0f_0         217 KB
+    mkl_fft-1.0.15             |   py27ha843d7b_0         146 KB
+    mkl_random-1.1.0           |   py27hd6b4f25_0         297 KB
+    multiqc-0.9.1a0            |           py27_4         760 KB  bioconda
+    numpy-1.16.6               |   py27hbc911f0_0          48 KB
+    numpy-base-1.16.6          |   py27hde5b4d6_0         3.5 MB
+    pcre2-10.37                |       he7ceb23_1         839 KB
+    pip-19.3.1                 |           py27_0         1.7 MB
+    pyparsing-2.4.7            |     pyhd3eb1b0_0          59 KB
+    pyqt-5.9.2                 |   py27h05f1152_2         4.3 MB
+    python-2.7.18              |       ha1903f6_2         9.8 MB
+    python-dateutil-2.8.2      |     pyhd3eb1b0_0         233 KB
+    pytz-2021.3                |     pyhd3eb1b0_0         171 KB
+    pyyaml-5.2                 |   py27h7b6447c_0         171 KB
+    qt-5.9.7                   |       h5867ecd_1        68.5 MB
+    setuptools-44.0.0          |           py27_0         512 KB
+    simplejson-3.8.1           |           py27_0         131 KB  bioconda
+    singledispatch-3.7.0       |  pyhd3eb1b0_1001          12 KB
+    sip-4.19.8                 |   py27hf484d3e_0         275 KB
+    six-1.16.0                 |     pyhd3eb1b0_1          18 KB
+    subprocess32-3.5.4         |   py27h7b6447c_0          51 KB
+    tornado-5.1.1              |   py27h7b6447c_0         615 KB
+    wheel-0.37.1               |     pyhd3eb1b0_0          33 KB
+    yaml-0.1.7                 |       had09818_2          73 KB
+    ------------------------------------------------------------
+                                           Total:       275.8 MB
+
+The following NEW packages will be INSTALLED:
+
+  backports          pkgs/main/noarch::backports-1.1-pyhd3eb1b0_1 
+  backports.functoo~ pkgs/main/noarch::backports.functools_lru_cache-1.6.4-pyhd3eb1b0_0 
+  backports_abc      pkgs/main/noarch::backports_abc-0.5-py_1 
+  blas               pkgs/main/linux-64::blas-1.0-mkl 
+  certifi            pkgs/main/noarch::certifi-2020.6.20-pyhd3eb1b0_3 
+  click              pkgs/main/noarch::click-7.1.2-pyhd3eb1b0_0 
+  cycler             pkgs/main/linux-64::cycler-0.10.0-py27_0 
+  dbus               pkgs/main/linux-64::dbus-1.16.2-h5bd4931_0 
+  fontconfig         pkgs/main/linux-64::fontconfig-2.14.1-h52c9d5c_1 
+  freetype           pkgs/main/linux-64::freetype-2.13.3-h4a9f257_0 
+  functools32        pkgs/main/linux-64::functools32-3.2.3.2-py27_1 
+  futures            pkgs/main/linux-64::futures-3.3.0-py27_0 
+  gettext            pkgs/main/linux-64::gettext-0.21.0-hf68c758_0 
+  git                pkgs/main/linux-64::git-2.34.1-pl5262hc120c5b_0 
+  glib               pkgs/main/linux-64::glib-2.69.1-h4ff587b_1 
+  gst-plugins-base   pkgs/main/linux-64::gst-plugins-base-1.14.1-h6a678d5_1 
+  gstreamer          pkgs/main/linux-64::gstreamer-1.14.1-h5eee18b_1 
+  intel-openmp       pkgs/main/linux-64::intel-openmp-2025.0.0-h06a4308_1171 
+  jinja2             pkgs/main/noarch::jinja2-2.11.3-pyhd3eb1b0_0 
+  jpeg               pkgs/main/linux-64::jpeg-9e-h5eee18b_3 
+  kiwisolver         pkgs/main/linux-64::kiwisolver-1.1.0-py27he6710b0_0 
+  libgfortran-ng     pkgs/main/linux-64::libgfortran-ng-7.5.0-ha8ba4b0_17 
+  libgfortran4       pkgs/main/linux-64::libgfortran4-7.5.0-ha8ba4b0_17 
+  libpng             pkgs/main/linux-64::libpng-1.6.39-h5eee18b_0 
+  libxml2            pkgs/main/linux-64::libxml2-2.9.14-h74e7548_0 
+  markupsafe         pkgs/main/linux-64::markupsafe-1.1.1-py27h7b6447c_0 
+  matplotlib         pkgs/main/linux-64::matplotlib-2.2.3-py27hb69df0a_0 
+  mkl                pkgs/main/linux-64::mkl-2020.2-256 
+  mkl-service        pkgs/main/linux-64::mkl-service-2.3.0-py27he904b0f_0 
+  mkl_fft            pkgs/main/linux-64::mkl_fft-1.0.15-py27ha843d7b_0 
+  mkl_random         pkgs/main/linux-64::mkl_random-1.1.0-py27hd6b4f25_0 
+  multiqc            bioconda/linux-64::multiqc-0.9.1a0-py27_4 
+  numpy              pkgs/main/linux-64::numpy-1.16.6-py27hbc911f0_0 
+  numpy-base         pkgs/main/linux-64::numpy-base-1.16.6-py27hde5b4d6_0 
+  pcre2              pkgs/main/linux-64::pcre2-10.37-he7ceb23_1 
+  pip                pkgs/main/linux-64::pip-19.3.1-py27_0 
+  pyparsing          pkgs/main/noarch::pyparsing-2.4.7-pyhd3eb1b0_0 
+  pyqt               pkgs/main/linux-64::pyqt-5.9.2-py27h05f1152_2 
+  python             pkgs/main/linux-64::python-2.7.18-ha1903f6_2 
+  python-dateutil    pkgs/main/noarch::python-dateutil-2.8.2-pyhd3eb1b0_0 
+  pytz               pkgs/main/noarch::pytz-2021.3-pyhd3eb1b0_0 
+  pyyaml             pkgs/main/linux-64::pyyaml-5.2-py27h7b6447c_0 
+  qt                 pkgs/main/linux-64::qt-5.9.7-h5867ecd_1 
+  setuptools         pkgs/main/linux-64::setuptools-44.0.0-py27_0 
+  simplejson         bioconda/linux-64::simplejson-3.8.1-py27_0 
+  singledispatch     pkgs/main/noarch::singledispatch-3.7.0-pyhd3eb1b0_1001 
+  sip                pkgs/main/linux-64::sip-4.19.8-py27hf484d3e_0 
+  six                pkgs/main/noarch::six-1.16.0-pyhd3eb1b0_1 
+  subprocess32       pkgs/main/linux-64::subprocess32-3.5.4-py27h7b6447c_0 
+  tornado            pkgs/main/linux-64::tornado-5.1.1-py27h7b6447c_0 
+  wheel              pkgs/main/noarch::wheel-0.37.1-pyhd3eb1b0_0 
+  yaml               pkgs/main/linux-64::yaml-0.1.7-had09818_2 
+
+The following packages will be DOWNGRADED:
+
+  libffi                                   3.4.4-h6a678d5_1 --> 3.3-he6710b0_2 
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+                                                                                                                                                                  
+                                                                                                                                                                  
+InvalidArchiveError('Error with archive /home/kefeletswemajoka/miniconda3/pkgs/libgfortran4-7.5.0-ha8ba4b0_17.conda.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: [Errno 28] No space left on device')                                                                  
+InvalidArchiveError('Error with archive /home/kefeletswemajoka/miniconda3/pkgs/glib-2.69.1-h4ff587b_1.conda.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: [Errno 28] No space left on device')                                                                          
+InvalidArchiveError('Error with archive /home/kefeletswemajoka/miniconda3/pkgs/gstreamer-1.14.1-h5eee18b_1.conda.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: [Errno 28] No space left on device')                                                                     
+InvalidArchiveError('Error with archive /home/kefeletswemajoka/miniconda3/pkgs/freetype-2.13.3-h4a9f257_0.conda.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: [Errno 28] No space left on device')                                                                      
+InvalidArchiveError('Error with archive /home/kefeletswemajoka/miniconda3/pkgs/setuptools-44.0.0-py27_0.conda.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: [Errno 28] No space left on device')                                                                        
+InvalidArchiveError('Error with archive /home/kefeletswemajoka/miniconda3/pkgs/pcre2-10.37-he7ceb23_1.conda.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: [Errno 28] No space left on device')                                                                          
+InvalidArchiveError('Error with archive /home/kefeletswemajoka/miniconda3/pkgs/multiqc-0.9.1a0-py27_4.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: [Errno 28] No space left on device')                                                                        
+InvalidArchiveError('Error with archive /home/kefeletswemajoka/miniconda3/pkgs/mkl_random-1.1.0-py27hd6b4f25_0.conda.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: [Errno 28] No space left on device')                                                                 
+InvalidArchiveError('Error with archive /home/kefeletswemajoka/miniconda3/pkgs/python-2.7.18-ha1903f6_2.conda.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: [Errno 28] No space left on device')                                                                        
+InvalidArchiveError('Error with archive /home/kefeletswemajoka/miniconda3/pkgs/mkl-2020.2-256.conda.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: [Errno 28] No space left on device')                                                                                  
+InvalidArchiveError('Error with archive /home/kefeletswemajoka/miniconda3/pkgs/qt-5.9.7-h5867ecd_1.conda.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: [Errno 28] No space left on device')                                                                             
+                                                                                                                                                                  
+(funtools) kefeletswemajoka@cloudshell:~$ multiqc --version
+bash: multiqc: command not found                                                                                                                                  
+(funtools) kefeletswemajoka@cloudshell:~$                                                                                                                         
+                                                          

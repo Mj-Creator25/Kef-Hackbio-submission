@@ -1,0 +1,79 @@
+kefeletswemajoka@cloudshell:~/Kefeletswe$ #!/bin/bash
+kefeletswemajoka@cloudshell:~/Kefeletswe$ #NGS Practice Script-Kefeletswe Majoka
+kefeletswemajoka@cloudshell:~/Kefeletswe$ #print your name
+kefeletswemajoka@cloudshell:~/Kefeletswe$ echo "Kefeletswe Majoka"
+Kefeletswe Majoka
+kefeletswemajoka@cloudshell:~/Kefeletswe$ #create directories
+kefeletswemajoka@cloudshell:~/Kefeletswe$ mkdir -p Kefeletswe
+kefeletswemajoka@cloudshell:~/Kefeletswe$ mkdir -p biocomputing
+kefeletswemajoka@cloudshell:~/Kefeletswe$ cd biocomputing || exit
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #Download files
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.fna
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
+  
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ grep -v "^LOCUS" ../Kefeletswe/wildtype.gbk | wc -l
+grep: ../Kefeletswe/wildtype.gbk: No such file or directory
+0
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #mv wildtype.fna ../Kefeletswe/
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ Delete duplicate wildtype.gbk.1 file                                                                       
+-bash: Delete: command not found
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #Delete duplicate wildtype.gbk.1 file
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #rm -i wildtype.gbk.1                                                                                      
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #check mutant or wildtype in .fna
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ if grep -qi "tatatata" ../Kefeletswe/wildtype.fna; then
+> echo "Mutant"
+> grep -i "tatatata" ../Kefeletswe/wildtype.fna > mutant_lines.txt
+> echo "Mutant lines saved to mutant_lines.txt"
+> else
+> echo "Wild type"
+> fi
+grep: ../Kefeletswe/wildtype.fna: No such file or directory
+Wild type
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #count number of lines in wildtype.gbk(excluding LOCUS header)                                             
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ grep -v "^LOCUS" ../Kefeletswe/wildtype.gbk | wc -l
+grep: ../Kefeletswe/wildtype.gbk: No such file or directory
+0
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ grep -v "^LOCUS" ../biocomputing/wildtype.gbk | wc -l                                                      
+grep: ../biocomputing/wildtype.gbk: No such file or directory
+0
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ ^C
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ grep -v "^LOCUS" ./biocomputing/wildtype.gbk | wc -l                                                       
+grep: ./biocomputing/wildtype.gbk: No such file or directory
+0
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ grep -v "^LOCUS" ../biocomputing/wildtype.gbk | wc -l                                                      
+grep: ../biocomputing/wildtype.gbk: No such file or directory
+0
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #print sequence lenght from LOCUS line
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ lsildtype.gbk | wc       
+-bash: lsildtype.gbk: command not found
+      0       0       0
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #print sequence length from ^C
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #print sequence length from LOCUS line
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ grep "^LOCUS" ../biocomputing/wildtype.gbk | '{gsub(/[^0-9]/,"",$3); print $3}'
+-bash: {gsub(/[^0-9]/,"",$3); print $3}: No such file or directory
+grep: ../biocomputing/wildtype.gbk: No such file or directory
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ grep "^LOCUS" ../Kefeletswe/biocomputing/wildtype.gbk | '{gsub(/[^0-9]/,"",$3); print $3}'
+-bash: {gsub(/[^0-9]/,"",$3); print $3}: No such file or directory
+grep: ../Kefeletswe/biocomputing/wildtype.gbk: No such file or directory
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #Print source organism from SOURCE line
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ grep "^SOURCE" ../biocomputing/wildtype.gbk | cut -d' ' -f2-
+grep: ../biocomputing/wildtype.gbk: No such file or directory
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #List all gene names and save to a file
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ grep '/gene=' ../biocomputing/wildtype.gbk | sed 's/\/gene="//;s/"//' > gene_names.txt
+grep: ../biocomputing/wildtype.gbk: No such file or directory
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ echo "Gene names saved to gene_names.txt"
+Gene names saved to gene_names.txt
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #clear terminal space
+kefeletswemajoka@cloudshell:~/Kefeletswe/biocomputing$ #clear
+
+kefeletswemajoka@cloudshell:~$ pwd
+/home/kefeletswemajoka
+kefeletswemajoka@cloudshell:~$ ls
+biocomputing  hackbio  hackbio_file.txt  Kefeletswe  README-cloudshell.txt
+kefeletswemajoka@cloudshell:~$ ls Kefeletswe biocomputing
+biocomputing:
+wildtype.gbk
+
+Kefeletswe:
+biocomputing  Kefeletswe  mutant_lines.txt  wildtype.fna
+kefeletswemajoka@cloudshell:~$ 
